@@ -312,4 +312,65 @@ body {
     .media-container {
         margin: 1rem 0;
     }
+}
+
+/* Video Styles */
+video {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    background-color: #000;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Mobile-specific video styles */
+@media (max-width: 768px) {
+    video {
+        max-height: 300px;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .media-container {
+        padding: 10px;
+    }
+    
+    .media-item {
+        margin: 0;
+    }
+}
+
+/* Ensure video controls are visible on mobile */
+video::-webkit-media-controls {
+    display: flex;
+}
+
+video::-webkit-media-controls-play-button {
+    display: flex;
+}
+
+video::-webkit-media-controls-timeline {
+    display: flex;
+}
+
+video::-webkit-media-controls-current-time-display {
+    display: flex;
+}
+
+video::-webkit-media-controls-time-remaining-display {
+    display: flex;
+}
+
+video::-webkit-media-controls-mute-button {
+    display: flex;
+}
+
+video::-webkit-media-controls-volume-slider {
+    display: flex;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+    display: flex;
 } 
